@@ -1,0 +1,184 @@
+{
+	"id": "ba7a9811-5a6b-42cd-a59d-c0a4d215c8d7",
+	"name": "RequestTest",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"6843f8d2-3552-4ead-bcb9-02714fc6bfa8",
+		"7f118592-d445-4984-8fce-44dccc8ea5c9",
+		"444e01d6-8a18-4010-9202-855064a45244"
+	],
+	"folders_order": [],
+	"protocolProfileBehavior": {},
+	"folders": [],
+	"requests": [
+		{
+			"id": "444e01d6-8a18-4010-9202-855064a45244",
+			"name": "LinkshereRequest",
+			"url": "https://ru.wikipedia.org/w/api.php?action=query&prop=linkshere&lhprop=title&titles=Россия&format=json",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "action",
+					"value": "query",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "prop",
+					"value": "linkshere",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "lhprop",
+					"value": "title",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				},
+				{
+					"key": "titles",
+					"value": "Россия",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "format",
+					"value": "json",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "6843f8d2-3552-4ead-bcb9-02714fc6bfa8",
+			"name": "InfoRequest",
+			"url": "https://ru.wikipedia.org/w/api.php?action=query&format=json&titles=Санкт-Петербург&prop=info&inprop=url",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "action",
+					"value": "query",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "format",
+					"value": "json",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "titles",
+					"value": "Санкт-Петербург",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "prop",
+					"value": "info",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "inprop",
+					"value": "url",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2ed8e42-022a-46ba-ad83-dfe12be1f64c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "7f118592-d445-4984-8fce-44dccc8ea5c9",
+			"name": "AllimagesRequest",
+			"url": "https://ru.wikipedia.org/w/api.php?action=query&list=allimages&aifrom=Волгоград&format=json",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "action",
+					"value": "query",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "list",
+					"value": "allimages",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "aifrom",
+					"value": "Волгоград",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "format",
+					"value": "json",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
