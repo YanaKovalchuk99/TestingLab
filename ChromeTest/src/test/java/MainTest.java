@@ -33,25 +33,19 @@ public class MainTest {
             WebElement input = driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input"));
             input.sendKeys("aeroflot");
             input.submit();
-
-
             (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
                 public Boolean apply(WebDriver d) {
                     return d.getTitle().toLowerCase().startsWith("aeroflot");
                 } });
 
             WebElement link = driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div/div[1]/a"));
-
-
             assertEquals("www.aeroflot.ru", link.getText());
         }
         catch (Error e){
 
             verificationErrors.append(e.toString());
         }
-
     }
-
     @After
     public void tearDown(){
         driver.quit();
