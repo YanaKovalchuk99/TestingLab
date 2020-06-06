@@ -39,9 +39,11 @@ public class CatalogPageTest {
 
         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
-                return d.findElement(By.xpath("/html/body/div/div[1]/div[2]/main/section/div/div[1]/div/ul/li[1]/div/div/div[2]/a")).getText().toLowerCase().startsWith("базовый");
+                return d.findElement(By.xpath("/html/body/div/div[1]/div[2]/main/section/div/div[1]/div"
+                                              +"/ul/li[1]/div/div/div[2]/a")).getText().toLowerCase().startsWith("базовый");
             } });
-        WebElement link = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/main/section/div/div[1]/div/ul/li[1]/div/div/div[2]/a"));
+        WebElement link = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/main/section"
+                                                      +"/div/div[1]/div/ul/li[1]/div/div/div[2]/a"));
         Assert.assertEquals("Базовый курс подготовки к ОГЭ по математике", link.getText());
 
     }
@@ -52,10 +54,12 @@ public class CatalogPageTest {
         catalogPage.newUser();
         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
-                return d.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[4]/div/div/div/div[2]/div/div/header/div/div/a[2]")).getText().toLowerCase().startsWith("регистрация");
+                return d.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[4]"+
+                         "/div/div/div/div[2]/div/div/header/div/div/a[2]")).getText().toLowerCase().startsWith("регистрация");
             } });
 
-        WebElement link = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[4]/div/div/div/div[2]/div/div/header/div/div/a[2]"));
+        WebElement link = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]"
+                                                      +"/div[4]/div/div/div/div[2]/div/div/header/div/div/a[2]"));
         Assert.assertEquals("Регистрация", link.getText());
 
     }
