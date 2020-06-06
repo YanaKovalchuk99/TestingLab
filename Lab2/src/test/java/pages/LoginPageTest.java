@@ -47,7 +47,8 @@ public class LoginPageTest {
     public void remindPassword(){
         loginPage.forgot();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        WebElement link = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[4]/div/div/div/div[2]/div/div/div/div/div/div/form/h3"));
+        WebElement link = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[4]/div/div"
+                                                      +"/div/div[2]/div/div/div/div/div/div/form/h3"));
         Assert.assertEquals("Забыли свой пароль?", link.getText());
     }
 
